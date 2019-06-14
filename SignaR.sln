@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignaR", "SignaR\SignaR.csproj", "{73906C20-EEFB-466F-9490-D778DA0EE83C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRCommon", "SignalRCommon\SignalRCommon.csproj", "{A9723F5F-4A18-494F-B745-18F7D6F309C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRTestClient", "SignalRTestClient\SignalRTestClient.csproj", "{D695CBC7-C16A-4455-95E7-294950B5A019}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{73906C20-EEFB-466F-9490-D778DA0EE83C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73906C20-EEFB-466F-9490-D778DA0EE83C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73906C20-EEFB-466F-9490-D778DA0EE83C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9723F5F-4A18-494F-B745-18F7D6F309C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9723F5F-4A18-494F-B745-18F7D6F309C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9723F5F-4A18-494F-B745-18F7D6F309C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9723F5F-4A18-494F-B745-18F7D6F309C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D695CBC7-C16A-4455-95E7-294950B5A019}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D695CBC7-C16A-4455-95E7-294950B5A019}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D695CBC7-C16A-4455-95E7-294950B5A019}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D695CBC7-C16A-4455-95E7-294950B5A019}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

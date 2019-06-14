@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using SignalRCommon;
 
 namespace SignaR
 {
@@ -26,6 +27,7 @@ namespace SignaR
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddSignalR();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,6 +45,10 @@ namespace SignaR
 
             app.UseHttpsRedirection();
             app.UseMvc();
+            app.UseSignalR(opt =>
+            {
+                opt.MapHub<TestHub>("/testhub");
+            });
         }
     }
 }
