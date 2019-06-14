@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Distributed;
+using Newtonsoft.Json;
+using SignalR.Cache.Model;
 
 namespace SignaR.Controllers
 {
@@ -29,7 +31,15 @@ namespace SignaR.Controllers
         [Route("TestCache")]
         public IActionResult TestCache()
         {
-            return Ok(_cache.GetString("testTime"));
+            var serializedTable = _cache.GetString("testingTable");
+            Table table = null;
+            if (!string.IsNullOrEmpty(serializedTable))
+                table = JsonConvert.DeserializeObject<Table>(serializedTable);
+
+            if (table == null)
+                return NotFound();
+
+            return Ok(new { CacheCreationTime = _cache.GetString("testTime"), TestingTable = table });
         }
     }
 }

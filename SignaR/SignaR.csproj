@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SignalR.Cache\SignalR.Cache.csproj" />
     <ProjectReference Include="..\SignalRCommon\SignalRCommon.csproj" />
   </ItemGroup>
 
