@@ -1,8 +1,7 @@
 ﻿using Microsoft.Extensions.Caching.Distributed;
 using Newtonsoft.Json;
-using SignalR.Cache.Model;
-using SignalR.Cache.Model.NoughtsAndCrosses;
-using SignalRCommon;
+using SignalR.Common.Model;
+using SignalR.Common.Model.NoughtsAndCrosses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,14 +13,14 @@ namespace SignaR.Cache
     {
         public static void Seed(IDistributedCache _cache)
         {
-            _cache.SetString("serverStartTime", DateTime.UtcNow.ToString());
-            List<NoughtsAndCrossesTable> tables = GenerateTables<NoughtsAndCrossesTable>(10); ;
+            _cache.SetString("Server.StartTime", DateTime.UtcNow.ToString());
+            var tables = GenerateTables<NoughtsAndCrossesTable>(10); ;
 
             var serializedNaCTables = JsonConvert.SerializeObject(tables);
-            _cache.SetString("NoughtsAndCrossesTables", serializedNaCTables);
+            _cache.SetString("NoughtsAndCrosses.Tables", serializedNaCTables);
         }
 
-        private static List<T> GenerateTables<T>(int amount) where T: Table
+        private static List<Table> GenerateTables<T>(int amount) where T: Table
         {
             var tables = new List<Table>();
 
@@ -34,7 +33,7 @@ namespace SignaR.Cache
                 }
             }
 
-            return tables as List<T>;
+            return tables;
         }
     }
 }

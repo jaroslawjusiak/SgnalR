@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Distributed;
 using Newtonsoft.Json;
-using SignalR.Cache.Model;
+using SignalR.Common.Model;
 
 namespace SignaR.Controllers
 {

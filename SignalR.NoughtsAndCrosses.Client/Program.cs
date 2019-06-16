@@ -1,14 +1,18 @@
 ﻿using Microsoft.AspNetCore.SignalR.Client;
+using Newtonsoft.Json;
+using SignalR.Common.Model;
 using SignalRCommon;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace SignalRTestClient
+namespace SignalR.NoughtsAndCrosses.Client
 {
     class Program
     {
-        private const string _connectionString = "https://localhost:5001/testhub";
-        static HubConnection _hubConnection;
+        private const string _connectionString = "https://localhost:5001/NoughtsAndCrosses";
+        private static HubConnection _hubConnection;
+        private static List<Table> _tables;
 
         static async Task Main(string[] args)
         {
@@ -26,9 +30,9 @@ namespace SignalRTestClient
             await _hubConnection.StopAsync();
         }
 
-        private static void AcknowledgeLogin(string session, string info)
+        private static void AcknowledgeLogin(string session, string tableInfo)
         {
-            throw new NotImplementedException();
+            _tables = JsonConvert.DeserializeObject<List<Table>>(tableInfo);
         }
 
         private static async Task Login()
@@ -47,27 +51,6 @@ namespace SignalRTestClient
 
             await _hubConnection.InvokeAsync(NoughtsAndCrossesHubMethods.Login, username);
         }
-
-        private static async Task Listener()
-        {
-            Console.Write("Username: ");
-            var username = Console.ReadLine();
-            string input;
-
-            do
-            {
-                input = Console.ReadLine();
-                ClearCurrentConsoleLine();
-
-                if (string.IsNullOrWhiteSpace(input))
-                    continue;
-
-                await _hubConnection.InvokeAsync(TestHubMethods.TestMessage, username, input);
-
-            } while (input?.Equals("exit") != true);
-        }
-
-
         private static void PrintMessage(string sender, string message)
         {
             Console.BackgroundColor = ConsoleColor.DarkBlue;
@@ -75,13 +58,6 @@ namespace SignalRTestClient
             Console.WriteLine($"[{DateTime.Now.ToShortTimeString()}] {sender}: {message}");
             Console.ResetColor();
         }
-
-        private static void ClearCurrentConsoleLine()
-        {
-            var currentLineCursor = Console.CursorTop - 1;
-            Console.SetCursorPosition(0, Console.CursorTop - 1);
-            Console.Write(new string(' ', Console.WindowWidth));
-            Console.SetCursorPosition(0, currentLineCursor);
-        }
+        
     }
 }

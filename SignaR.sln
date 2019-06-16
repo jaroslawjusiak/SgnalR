@@ -5,11 +5,17 @@ VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignaR", "SignaR\SignaR.csproj", "{73906C20-EEFB-466F-9490-D778DA0EE83C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRCommon", "SignalRCommon\SignalRCommon.csproj", "{A9723F5F-4A18-494F-B745-18F7D6F309C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalR.Common", "SignalRCommon\SignalR.Common.csproj", "{A9723F5F-4A18-494F-B745-18F7D6F309C9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRTestClient", "SignalRTestClient\SignalRTestClient.csproj", "{D695CBC7-C16A-4455-95E7-294950B5A019}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalR.Cache", "SignalR.Cache\SignalR.Cache.csproj", "{A4DFB36F-F509-4556-8F93-46A4065333EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalR.Cache", "SignalR.Cache\SignalR.Cache.csproj", "{A4DFB36F-F509-4556-8F93-46A4065333EB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalR.NoughtsAndCrosses.Client", "SignalR.NoughtsAndCrosses.Client\SignalR.NoughtsAndCrosses.Client.csproj", "{48C2D979-F936-4A56-B72D-5C2FD366B1FF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SingnalR.NoughtsAndCrosses.WinFormsClient", "SingnalR.NoughtsAndCrosses.WinFormsClient\SingnalR.NoughtsAndCrosses.WinFormsClient.csproj", "{957B15DD-F5AB-42A1-907C-75B8B1559082}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingnalR.NoughtsAndCrosses.WinFormsClient.Designer", "WinFormsDesigner\SingnalR.NoughtsAndCrosses.WinFormsClient.Designer.csproj", "{D860C7EF-96B6-426D-B331-7E249F09A0C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +39,18 @@ Global
 		{A4DFB36F-F509-4556-8F93-46A4065333EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4DFB36F-F509-4556-8F93-46A4065333EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4DFB36F-F509-4556-8F93-46A4065333EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48C2D979-F936-4A56-B72D-5C2FD366B1FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48C2D979-F936-4A56-B72D-5C2FD366B1FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48C2D979-F936-4A56-B72D-5C2FD366B1FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48C2D979-F936-4A56-B72D-5C2FD366B1FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{957B15DD-F5AB-42A1-907C-75B8B1559082}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{957B15DD-F5AB-42A1-907C-75B8B1559082}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{957B15DD-F5AB-42A1-907C-75B8B1559082}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{957B15DD-F5AB-42A1-907C-75B8B1559082}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D860C7EF-96B6-426D-B331-7E249F09A0C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D860C7EF-96B6-426D-B331-7E249F09A0C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D860C7EF-96B6-426D-B331-7E249F09A0C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D860C7EF-96B6-426D-B331-7E249F09A0C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

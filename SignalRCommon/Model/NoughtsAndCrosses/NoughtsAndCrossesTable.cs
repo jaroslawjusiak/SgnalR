@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SignalR.Cache.Model.NoughtsAndCrosses
+namespace SignalR.Common.Model.NoughtsAndCrosses
 {
     public class NoughtsAndCrossesTable : Table
     {
-        public Player Noughts { get; set; }
-        public Player Crosses { get; set; }
+        public PlayerSession Noughts { get; set; }
+        public PlayerSession Crosses { get; set; }
 
         //public List<Player> Visitors { get; set; }
     }

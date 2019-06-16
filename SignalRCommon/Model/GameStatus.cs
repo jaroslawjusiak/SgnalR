@@ -1,4 +1,4 @@
-﻿namespace SignalR.Cache.Model
+﻿namespace SignalR.Common.Model
 {
     public enum GameStatus
     {

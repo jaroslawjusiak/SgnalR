@@ -53,6 +53,7 @@ namespace SignaR
             app.UseSignalR(opt =>
             {
                 opt.MapHub<TestHub>("/testhub");
+                opt.MapHub<NoughtsAndCrossesHub>("/NoughtsAndCrosses");
             });
         }
     }

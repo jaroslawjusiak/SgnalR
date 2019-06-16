@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SignalR.Cache.Model
+namespace SignalR.Common.Model
 {
     public class Game
     {
