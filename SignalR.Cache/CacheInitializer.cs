@@ -20,15 +20,15 @@ namespace SignaR.Cache
             _cache.SetString("NoughtsAndCrosses.Tables", serializedNaCTables);
         }
 
-        private static List<Table> GenerateTables<T>(int amount) where T: Table
+        private static List<T> GenerateTables<T>(int amount) where T: Table, new()
         {
-            var tables = new List<Table>();
+            var tables = new List<T>();
 
             if (typeof(T) == typeof(NoughtsAndCrossesTable))
             {
                 for (int i = 0; i < amount; i++)
                 {
-                    var table = new NoughtsAndCrossesTable { Id = Guid.NewGuid(), Name = $"Table {i + 1}" };
+                    var table = new T { Id = Guid.NewGuid(), Name = $"Table {i + 1}" };
                     tables.Add(table);
                 }
             }
