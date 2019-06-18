@@ -84,5 +84,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SignalRCommon\SignalR.Common.csproj">
+      <Project>{A9723F5F-4A18-494F-B745-18F7D6F309C9}</Project>
+      <Name>SignalR.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
