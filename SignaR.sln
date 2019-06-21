@@ -15,8 +15,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalR.NoughtsAndCrosses.C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SingnalR.NoughtsAndCrosses.WinFormsClient", "SingnalR.NoughtsAndCrosses.WinFormsClient\SingnalR.NoughtsAndCrosses.WinFormsClient.csproj", "{957B15DD-F5AB-42A1-907C-75B8B1559082}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingnalR.NoughtsAndCrosses.WinFormsClient.Designer", "WinFormsDesigner\SingnalR.NoughtsAndCrosses.WinFormsClient.Designer.csproj", "{D860C7EF-96B6-426D-B331-7E249F09A0C1}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,10 +45,6 @@ Global
 		{957B15DD-F5AB-42A1-907C-75B8B1559082}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{957B15DD-F5AB-42A1-907C-75B8B1559082}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{957B15DD-F5AB-42A1-907C-75B8B1559082}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D860C7EF-96B6-426D-B331-7E249F09A0C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D860C7EF-96B6-426D-B331-7E249F09A0C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D860C7EF-96B6-426D-B331-7E249F09A0C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D860C7EF-96B6-426D-B331-7E249F09A0C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

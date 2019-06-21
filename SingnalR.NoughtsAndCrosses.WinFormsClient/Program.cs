@@ -13,7 +13,7 @@ namespace SingnalR.NoughtsAndCrosses.WinFormsClient
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new NaCClientForm());
+            Application.Run(new NaCForm());
 
         }
     }
